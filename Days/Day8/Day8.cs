@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode2022.Days.Day8
 {
@@ -31,6 +27,7 @@ namespace AdventOfCode2022.Days.Day8
         private Dictionary<(int x, int y), int> populateGrid()
         {
             Dictionary<(int x, int y), int> grid = new Dictionary<(int x, int y), int>();
+            //Brain fried, got annoyed. Calling this again. May fix later, probably not.
             var input = ReadLines();
             var totalWidth = input[0].Length;
             var totalHeight = input.Length;
