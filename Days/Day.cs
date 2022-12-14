@@ -2,7 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace AdventOfCode2022.Days
 {
@@ -31,7 +32,7 @@ namespace AdventOfCode2022.Days
             this.SolvePart2,
         };
 
-        protected uint DayNumber => uint.Parse(new ReadOnlySpan<char>(this.GetType().Name.LastOrDefault()));
+        protected uint DayNumber => uint.Parse((Regex.Match(this.GetType().Name, @"(\d+)").Value));
 
         protected string[] ReadLines()
         {
