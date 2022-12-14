@@ -27,7 +27,7 @@ namespace AdventOfCode2022.Days
 
         protected virtual Action[] PartSolvers => new Action[]
         {
-            this.SolvePart1,
+            //this.SolvePart1,
             this.SolvePart2,
         };
 
@@ -41,6 +41,15 @@ namespace AdventOfCode2022.Days
             string day = this.GetType().Name;
             string path = Path.Combine(root, @$"Days\{day}\{day}Input.txt");
             return File.ReadAllLines(path);
+        }
+
+        protected string ReadIntoLine()
+        {
+            string root = "C:\\Users\\ARMSTRONG\\source\\repos\\AdventOfCode2022\\AdventOfCode2022\\";
+
+            string day = this.GetType().Name;
+            string path = Path.Combine(root, @$"Days\{day}\{day}Input.txt");
+            return File.ReadAllText(path);
         }
     }
 }
