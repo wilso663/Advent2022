@@ -28,7 +28,7 @@ namespace AdventOfCode2022.Days
 
         protected virtual Action[] PartSolvers => new Action[]
         {
-            //this.SolvePart1,
+            this.SolvePart1,
             this.SolvePart2,
         };
 

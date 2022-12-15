@@ -20,7 +20,7 @@ namespace AdventOfCode2022.Days.Day10
 
         public override void SolvePart2()
         {
-            var biggun = GetSignalStrength(this.ReadLines())
+            var biggin = GetSignalStrength(this.ReadLines())
                 .Select(signal =>
                 {
                     var sprite = signal.value;
@@ -30,8 +30,8 @@ namespace AdventOfCode2022.Days.Day10
                 .Chunk(40)
                 .Select(line => new string(line))
                 .Aggregate("", (screen, line) => screen + line + "\n");
-            var biggunLines = biggun.Split("\n");
-            foreach(var line in biggunLines)
+            var bigginLines = biggin.Split("\n");
+            foreach(var line in bigginLines)
             {
                 Console.WriteLine($"{line}");
             }
